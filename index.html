@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .contact-details {
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #555;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 15px 0;
+        }
+
+        .photo-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Contact Details</h1>
+    <div class="photo-container">
+        <img src="sir pic.jpg" alt="Profile Picture" class="profile-photo">
+    </div>
+    <div class="contact-details">
+        <div class="contact-item">
+            <p><strong>Name:</strong> S. Niranjan Reddy</p>
+            <hr>
+        </div>
+        <div class="contact-item">
+            <p><strong>Post:</strong> Member of Parliament (Rajya Sabha) & Senior Advocate, Supreme Court of India</p>
+            <hr>
+        </div>
+        <div class="contact-item">
+            <p><strong>Phone:</strong> +91 9396226064 
+                <button onclick="callNumber('+919396336064')">
+                    📞
+                    <img src="whatsapp-icon.png" alt="WhatsApp" style="width: 16px; height: 16px; margin-left: 5px;">
+                </button>
+            </p>
+            <hr>
+        </div>
+        <div class="contact-item">
+            <p><strong>Email:</strong> 
+                <a href="mailto:snr.mprs@sansad.nic.in">snr.mprs@sansad.nic.in</a>
+                <button onclick="sendEmail('snr.mprs@sansad.nic.in')">✉️</button>
+            </p>
+            <hr>
+        </div>
+        <div class="contact-item">
+            <p><strong>Website:</strong> 
+                <a href="http://sansad.nic.in" target="_blank">sansad.nic.in</a>
+                <button onclick="openWebsite('http://sansad.nic.in')">Visit Website</button>
+            </p>
+            <hr>
+        </div>
+        <div class="contact-item">
+            <p><strong>Email:</strong> snr@snrlawoffice.com</p>
+            <hr>
+        </div>
+        <div class="contact-item">
+            <p><strong>Address:</strong></p>
+            <p>1. 137, (First Floor), Sunder Nagar, New Delhi</p>
+            <p>2. 8-3-309/3/A, 2nd Floor, Central Square @ 14, Road No. 14, Banjarahills, Hyderabad - 500034</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function callNumber(phoneNumber) {
+        window.location.href = 'tel:' + phoneNumber;
+    }
+
+    function sendEmail(emailAddress) {
+        window.location.href = 'mailto:' + emailAddress;
+    }
+
+    function openWebsite(url) {
+        window.open(url, '_blank');
+    }
+</script>
+
+</body>
+</html>
